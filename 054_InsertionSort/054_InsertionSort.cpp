@@ -8,10 +8,10 @@ void input() { //prosedur untuk input
 	while (true) {
 		cout << "Masukkan banyaknya elemen pada array : ";	//output ke layar
 		cin >> n;	//input dari pengguna
-		if (n <= 20)	//jika n kurang dari atau sama dengan 20
+		if (n <= 12)	//jika n kurang dari atau sama dengan 12
 			break;	//keluar dari loop
-		else {	//jika n lebih dari 20
-			cout << "\nArray dapat mempunyai maksimal 20 elemen. \n";	//output ke layar
+		else {	//jika n lebih dari 12
+			cout << "\nArray dapat mempunyai maksimal 12 elemen. \n";	//output ke layar
 		}
 	}
 	cout << endl;
@@ -41,6 +41,26 @@ void insertionsort() {
 		arr[j + 1] = temp;	//step 5
 
 	}
+}
+
+void display() {
+	cout << endl;
+	cout << "=================================" << endl;
+	cout << "Element Array yang telah tersusun" << endl;
+	cout << "=================================" << endl;
+	cout << endl;
+	for (int j = 0; j < n; j++) {
+		cout << arr[j];	//menampilkan array
+		if (j < n - 1) {
+			cout << " -->";
+		}
+	}
+	cout << endl;
+	cout << endl;
+
+	cout << " jumlah pass = " << n - 1 << endl;	//menampilkan jumlah dari pass
+	cout << endl;
+	cout << endl;
 }
 
 int main()
